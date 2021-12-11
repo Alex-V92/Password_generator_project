@@ -1,14 +1,30 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<div class="container text-center">
+
 <h1>Password Generator</h1>
 
-<form action="{% url 'password' %}">
+<form action="{% url 'passwd' %}">
     <select name="length">
-        <option value="123123123">123</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
         <option value="6">6</option>
-    </select>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12" selected="selected">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
 
-    <input type="submit" value="generator_password">
+    </select> Length
+    <br>
+    <input type="checkbox" name="uppercase">Uppercase
+    <br>
+    <input type="checkbox" name="numbers">Numbers
+    <br>
+    <input type="checkbox" name="special">Special Characters
+    <br>
+    <input type="submit" value="Generator password" class="btn btn-primary">
 </form>
+<br>
+<h2><a href="{% url 'about' %}" class="btn btn-info">О сайте</a></h2>
+    </div>
